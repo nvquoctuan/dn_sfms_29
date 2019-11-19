@@ -17,9 +17,6 @@
 !/storage/.keep
 .byebug_history
 /config/master.key
-config/settings/local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
 # Used by dotenv library to load environment variables.
 # .env
 /db/*.sqlite3
