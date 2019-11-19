@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "pages#home"
     resources :users, controller: "/users"
+    resources :subpitch_types
   end
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
