@@ -26,26 +26,6 @@ ActiveRecord::Schema.define(version: 2019_11_19_031752) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "subpitch_id", null: false
-    t.integer "id_parent"
-    t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["subpitch_id"], name: "index_comments_on_subpitch_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "subpitch_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["subpitch_id"], name: "index_likes_on_subpitch_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
   create_table "pitches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
@@ -119,10 +99,6 @@ ActiveRecord::Schema.define(version: 2019_11_19_031752) do
 
   add_foreign_key "bookings", "subpitches"
   add_foreign_key "bookings", "users"
-  add_foreign_key "comments", "subpitches"
-  add_foreign_key "comments", "users"
-  add_foreign_key "likes", "subpitches"
-  add_foreign_key "likes", "users"
   add_foreign_key "pitches", "users"
   add_foreign_key "ratings", "bookings"
   add_foreign_key "ratings", "users"
