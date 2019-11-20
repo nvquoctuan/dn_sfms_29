@@ -5,10 +5,12 @@ ruby "2.6.3"
 
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "~> 3.4.1"
+gem "bootstrap-will_paginate", "~> 1.0.0"
 gem "config"
-gem "coreui-rails"
+gem "faker", "~> 2.1.2"
 gem "figaro"
 gem "jbuilder", "~> 2.7"
+gem "jquery-rails"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.0"
 gem "rails-i18n"

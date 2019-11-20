@@ -45,6 +45,7 @@ vi:
         link: "CoreUI"
         content1_html: "&copy; 2019 creativeLabs."
         content2_html: "Powered by&nbsp;"
+  layouts:
     application:
       title: "Đặt lịch sân bóng đá nhanh chóng"
     header:
@@ -64,7 +65,6 @@ vi:
     left_sidebar:
       passion: "Niềm đam mê bóng đá"
       get_started: "Bắt đầu đặt"
-      book_soccer: "Đặt sân bóng"
       content1: "Nếu bạn không thực sự biết sân phù hợp cho bạn và đồng đội của bạn, hãy đến với chúng tôi!"
       get_started: "Bắt đầu"
     footer:
