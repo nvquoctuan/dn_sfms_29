@@ -52,7 +52,7 @@ vi:
       sign_up: Đăng kí
       title: "Đặt lịch sân bóng đá nhanh chóng"
     create:
-      please_check_mail: Vui lòng kiểm tra email của bạn để kích hoạt tài 
+      please_check_mail: Vui lòng kiểm tra email của bạn để kích hoạt tài
         khoản của bạn.
     update:
       profile_updated: Hồ sơ đã được cập nhật
@@ -159,3 +159,16 @@ vi:
   oversize_upload_picture: nên nhỏ hơn 5MB
   oversize_upload: Dung lượng tệp tải lên tối đa 5MB. Vui lòng chọn tệp nhỏ hơn
   not_allow: Bạn không được phép
+  users:
+    new:
+      update: "Cập nhật"
+      text1: "Đăng ký"
+    create:
+     welcome_user: "Đăng ký tài khoản thành công!"
+  sessions:
+    new:
+      sign_up: "Đăng ký ngay?"
+      log_in: "Đăng nhập"
+  user:
+    success: "Thành công!"
+    danger: "Thất bại!"

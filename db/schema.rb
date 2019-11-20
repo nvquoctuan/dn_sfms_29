@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 2019_11_22_160145) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "subpitch_id", null: false
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "subpitch_id", null: false
     t.datetime "start_time"
     t.datetime "end_time"
     t.string "message"
