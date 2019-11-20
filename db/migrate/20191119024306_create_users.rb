@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :phone
       t.string :password_digest
       t.string :reset_digest
-      t.integer :role
+      t.integer :role, default: 2
       t.datetime :reset_sent_at
       t.string :remember_digest
 

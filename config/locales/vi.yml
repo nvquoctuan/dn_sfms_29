@@ -1,0 +1,25 @@
+vi:
+  layouts:
+    admin:
+      sidebar:
+        home: "Trang chủ"
+        new: "MỚI"
+        manage: "Quản lý"
+        link1: "Link1"
+        link2: "Link2"
+      header:
+        Admin: "Admin"
+        home: "Trang chủ"
+        users: "Người dùng"
+        settings: "Thiết lập"
+        vn: "Tiếng việt"
+        en: "Tiếng anh"
+        profile: "Thông tin"
+        lock: "Khóa tài khoản"
+        logout: "Đăng xuất"
+      footer:
+        link: "CoreUI"
+        content1_html: "&copy; 2019 creativeLabs."
+        content2_html: "Powered by&nbsp;"
+  generate:
+    title: "Sân bóng đá"
