@@ -142,6 +142,8 @@ ActiveRecord::Schema.define(version: 2019_11_22_160145) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  end
+
   add_foreign_key "bookings", "subpitches"
   add_foreign_key "bookings", "users"
   add_foreign_key "comments", "subpitches"

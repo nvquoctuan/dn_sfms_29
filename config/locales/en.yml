@@ -2,6 +2,7 @@ en:
   users:
     show:
       title: "Quick schedule of football field"
+
   layouts:
     application:
       title: "Quick schedule of football field"
