@@ -1,0 +1,16 @@
+<section class="banner-area relative">
+  <div class="overlay overlay-bg"></div>
+  <div class="container">
+    <div class="row fullscreen align-items-center justify-content-between">
+      <%= render "layouts/left" %>
+      <div class="col-lg-4 col-md-6 banner-right" style="padding-top: 120px">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab" aria-controls="flight" aria-selected="true"><%= t(".pitch") %></a>
+          </li>
+        </ul>
+        <%= render "layouts/right" %>
+      </div>
+    </div>
+  </div>
+</section>
