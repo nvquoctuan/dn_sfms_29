@@ -19,6 +19,7 @@
 config/settings/local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+config/*.yml
 # Used by dotenv library to load environment variables.
 # .env
 /db/*.sqlite3
