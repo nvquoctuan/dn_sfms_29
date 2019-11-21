@@ -13,11 +13,16 @@ en:
         email: Email
         password: Password
       pitch:
-        address: Address
-        start_time: Start time
-        end_time: End time
-        city: City
-        district: District
+        name: "Name"
+        description: "Description"
+        country: "Country"
+        city: "City"
+        district: "District"
+        address: "Address"
+        picture: "Picture"
+        start_time: "Start_time"
+        end_time: "End_time"
+        limit: "Limit"
       subpitch_type:
         name: "Name"
         description: "Desciption"
@@ -31,8 +36,8 @@ en:
         submit: Continue
       pitch:
         search_pitch: Search pitch
-        create: "Create"
-        update: "Update"
+        create: "Create Pitch"
+        update: "Update Pitch"
       subpitch_type:
         create: "Create Subpitch Type"
   activerecord:
@@ -48,6 +53,10 @@ en:
           attributes:
             phone:
               invalid: include only numbers and must be 10 characters or more
+        pitch:
+          attributes:
+            end_time:
+              after: "bigger start time."
   layouts:
     admin:
       sidebar:
@@ -128,6 +137,8 @@ en:
     please_log_in: You has not been logged in
     not_allow: you are not allowed
     new:
+      update: "Update"
+      text1: "Sign in"
       sign_up: Sign up
       title: Quick schedule of football field
     create:
@@ -177,6 +188,52 @@ en:
       address: "Address: "
       notification: "There are no valid football fields!"
   admin:
+    pitches:
+      new:
+        title: Add pitch
+      form:
+        vi: "VietNam"
+        en: "EngLish"
+      danger_load: "Load failure"
+      create:
+        success: "Create success"
+        danger: "Create danger"
+      update:
+        success: "Update success"
+        danger: "Update danger"
+      destroy:
+        success: "Destroy success"
+        danger: "Destroy danger"
+      show:
+        title: "%{name} Pitch"
+        owner: "Owner: %{add}"
+        name: "Name pitch: %{add}"
+        description: "description: %{add}"
+        country: "Country: %{add}"
+        phone: "Phone; %{add}"
+        city: "City: %{add}"
+        start_time: "Start_time: %{add}"
+        end_time: "End_time: %{add}"
+      index:
+        search: "Search"
+        new: "New pitch"
+        title: "List Pitch"
+        id: "#"
+        user: "User"
+        name: "Name"
+        description: "Description"
+        country: "Country"
+        city: "City"
+        district: "District"
+        phone: "Phone"
+        picture: "Picture"
+        start_time: "Start_time"
+        end_time: "End_time"
+        option: "Option"
+      pitch:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "You sure?"
     pages:
       home:
         title: "Home admin"
@@ -292,3 +349,6 @@ en:
     update_danger: "Update danger"
     danger_permision: "Danger permission"
     not_subpitch: "Not subpitch"
+    not_pitch: "Not_pitch"
+    danger_permission: "User not permission"
+    play_time_invalid: "Giờ mở cửa không hợp lệ"

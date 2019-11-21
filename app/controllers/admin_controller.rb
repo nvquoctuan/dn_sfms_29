@@ -17,4 +17,12 @@ class AdminController < ApplicationController
     redirect_to root_path
     flash[:danger] = t "msg.danger_permission"
   end
+
+  def check_admin?
+    current_user.admin?
+  end
+
+  def check_owner?
+    current_user.owner?
+  end
 end
