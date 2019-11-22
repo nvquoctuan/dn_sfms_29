@@ -2,7 +2,6 @@
 
 <section class="banner-area relative">
   <div class="overlay overlay-bg"></div>
-  <div class="container user">
     <div class="row fullscreen align-items-center justify-content-between
       p-top-150px edit_profile">
       <div class="col-md-4">
@@ -21,7 +20,7 @@
                   <label><%= t ".name" %>: </label>
                 </div>
                 <div class="col-md-6">
-                  <p><%= @user.full_name %></p>
+                  <p><b><%= @user.full_name %></b></p>
                 </div>
               </div>
               <div class="row">
@@ -29,7 +28,7 @@
                   <label><%= t ".gender" %>: </label>
                 </div>
                 <div class="col-md-6">
-                  <p><%= @user.gender ? t(".male") : t(".female") %></p>
+                  <p><b><%= gender @user.gender %></b></p>
                 </div>
               </div>
               <div class="row">
@@ -37,7 +36,7 @@
                   <label><%= t ".email" %>: </label>
                 </div>
                 <div class="col-md-6">
-                  <p><%= @user.email %></p>
+                  <p><b><%= @user.email %></b></p>
                 </div>
               </div>
               <div class="row">
@@ -45,7 +44,7 @@
                   <label><%= t ".phone" %>: </label>
                 </div>
                 <div class="col-md-6">
-                  <p><%= @user.phone %></p>
+                  <p><b><%= @user.phone %></b></p>
                 </div>
               </div>
             </div>
@@ -53,5 +52,5 @@
         </div>
       <div class="col-md-2"></div>
     </div>
-  </div>
+    <div class="col-md-3"></div>
 </section>

@@ -1,7 +1,35 @@
 en:
-  users:
-    show:
-      title: "Quick schedule of football field"
+  helpers:
+    label:
+      user:
+        name: Name
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        phone: Phone
+        male: Male
+        female: Female
+      session:
+        email: Email
+        password: Password
+      pitch:
+        address: Address
+        start_time: Start time
+        end_time: End time
+        city: City
+        district: District
+    submit:
+      user:
+        create: Create
+        update: Update
+      session:
+        submit: Login
+      password_reset:
+        submit: Continue
+      pitch:
+        search_pitch: Search pitch
+        create: "Create"
+        update: "Update"
   layouts:
     admin:
       sidebar:
@@ -10,6 +38,9 @@ en:
         manage: "Manage"
         link1: "Link1"
         link2: "Link2"
+        pitch: "Pitch"
+        review: "Review"
+        subpitch_type: "Subpitch type"
       header:
         admin: "Admin"
         home: "Home"
@@ -20,6 +51,8 @@ en:
         profile: "Profile"
         lock: "Lock Account"
         logout: "Logout"
+        hello: "Hello: "
+        english: "English"
       footer:
         link: "CoreUI"
         content1_html: "&copy; 2019 creativeLabs."
@@ -39,6 +72,7 @@ en:
       log_out: Logout
       setting: Setting
       language: "Language"
+      manage: "Manage"
     right_sidebar:
       pitch: "Pitch"
       search_pitch: "Search pitch"
@@ -70,6 +104,8 @@ en:
       contact: "Contact"
       text1: "Football or Soccer (English-English: Football, American-English: Soccer) is a team sport played between two teams."
   users:
+    show:
+      title: "Quick schedule of football field"
     id_unexist: ID not exist!
     please_log_in: You has not been logged in
     not_allow: you are not allowed
@@ -92,6 +128,20 @@ en:
       male: Male
       female: Female
       title: Quick schedule of football field
+    index:
+      title: "List users"
+      id: "#"
+      avatar: "Avatar"
+      email: "Email"
+      full_name: "Full name"
+      gender: "Gender"
+      phone: "Phone"
+      activated: "Activated"
+      option: "Option"
+      search: "Search"
+    user:
+      edit: "Edit"
+      delete: "Delete"
   account_activations:
     edit:
       account_activated: Account activated!
@@ -107,8 +157,6 @@ en:
     index:
       address: "Address: "
       notification: "There are no valid football fields!"
-  generate:
-    page_title: "soccer fields"
   shared:
     error_messages:
       error:
@@ -141,36 +189,8 @@ en:
       email_address_not_found: Email not found
     new:
       forgot_password: Forgot password
+      log_in: Login
     email_address_not_found: Email address is not registered!
-  helpers:
-    label:
-      user:
-        name: Name
-        email: Email
-        password: Password
-        password_confirmation: Password confirmation
-        phone: Phone
-        male: Male
-        female: Female
-      session:
-        email: Email
-        password: Password
-      pitch:
-        address: ADDRESS
-        start_time: Start time
-        end_time: End time
-        city: City
-        district: District
-    submit:
-      pitch:
-        search_pitch: Search pitch
-      user:
-        create: Create
-        update: Update
-      session:
-        submit: Login
-      password_reset:
-        submit: Continue
   user_mailer:
     account_activation_subject: Activate account
     account_activation:
@@ -223,5 +243,19 @@ en:
       size: "Size: %{add}"
       subpitch_type: "Subpitch type: %{add}"
       desc: "Description: %{add}"
+  admin:
+    pages:
+      home:
+        title: "Home admin"
+  generate:
+    title: "soccer fields"
+    page_title: "soccer fields"
+    female: "Female"
+    male: "Male"
   msg:
+    destroy_success: "Destroy success"
+    destroy_danger: "Destroy danger"
+    create_success: "Create success"
+    create_danger: "Destroy danger"
+    danger_permision: "Danger permission"
     not_subpitch: "Not subpitch"

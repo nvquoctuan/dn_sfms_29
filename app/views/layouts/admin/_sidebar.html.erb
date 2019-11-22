@@ -5,26 +5,26 @@
   <ul class="c-sidebar-nav">
     <li class="c-sidebar-nav-item">
       <%= link_to admin_root_path, class: "c-sidebar-nav-link" do %>
-        <svg class="c-sidebar-nav-icon">
-        </svg> <%= t ".home" %>
+        <svg class="c-sidebar-nav-icon"></svg><%= t ".home" %>
         <span class="badge badge-info"><%= t ".new" %></span>
       <% end %>
     </li>
     <li class="c-sidebar-nav-title"><%= t ".manage" %></li>
     <li class="c-sidebar-nav-item">
       <%= link_to "#", class: "c-sidebar-nav-link" do %>
-        <svg class="c-sidebar-nav-icon">
-        </svg> <%= t ".link1" %>
+        <svg class="c-sidebar-nav-icon"></svg><%= t ".pitch" %>
       <% end %>
+
     <li class="c-sidebar-nav-item">
       <%= link_to "#", class: "c-sidebar-nav-link" do %>
-        <svg class="c-sidebar-nav-icon">
-        </svg> <%= t ".link2" %>
+        <svg class="c-sidebar-nav-icon"></svg><%= t ".review" %>
       <% end %>
     </li>
-  <%= button_tag "", type: "button", "data-target" => "_parent",
-                      "data-class" => "c-sidebar-minimized",
-                      class: "c-sidebar-minimizer c-class-toggler",
-                      onclick: "toggle_left('sidebar')",
-                      id: "toggle-left" %>
+    <% if current_user.admin? %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to "#", class: "c-sidebar-nav-link" do %>
+          <svg class="c-sidebar-nav-icon"></svg><%= t ".subpitch_type" %>
+        <% end %>
+      </li>
+    <% end %>
 </div>

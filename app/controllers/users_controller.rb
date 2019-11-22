@@ -1,8 +1,16 @@
 require "open-uri"
 class UsersController < ApplicationController
+  layout :load_layout
+  before_action :get_path, only: %i(create update)
+  before_action :load_user, except: %i(index new create)
   before_action :logged_in_user, except: %i(new create)
-  before_action :load_user, except: %i(new create)
-  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: %i(edit update)
+  before_action :admin_user, only: %i(destroy index)
+
+  def index
+    @users = User.order_active.search(params[:search])
+                 .paginate page: params[:page], per_page: Settings.size.s10
+  end
 
   def show; end
 
@@ -19,7 +27,7 @@ class UsersController < ApplicationController
       )
       @user.send_activation_email
       flash[:info] = t ".please_check_mail"
-      redirect_to root_path
+      redirect_to send("#{@link}root_path")
     else
       render :new
     end
@@ -30,9 +38,19 @@ class UsersController < ApplicationController
   def update
     if @user.update update_user_params
       flash[:success] = t ".profile_updated"
-      redirect_to edit_user_path
+      redirect_to send("#{@link}user_path")
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t "msg.destroy_success"
+      redirect_to admin_users_path
+    else
+      flash.now[:success] = t "msg.destroy_danger"
+      redirect_to admin_root_path
     end
   end
 
@@ -77,5 +95,13 @@ class UsersController < ApplicationController
     store_location
     flash[:danger] = t ".please_log_in"
     redirect_to login_path
+  end
+
+  def get_path
+    @link = request.referer.include?("admin") ? "admin_" : ""
+  end
+
+  def load_layout
+    request.original_url.include?("admin") ? "admin/application" : "application"
   end
 end

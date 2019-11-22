@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "static_pages#home"
   namespace :admin do
     root "pages#home"
+    resources :users, controller: "/users"
   end
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"

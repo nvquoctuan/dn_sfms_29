@@ -1,4 +1,8 @@
-User.create(full_name: "Example User", phone: "0964991298", email: "admin@soccer.vn", password: "123123", password_confirmation: "123123", role: 0, activated: true, activated_at: Time.zone.now)
+User.create!({full_name: "Example User", email: "admin@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964991298", role: 0, activated: true, activated_at: Time.zone.now})
+User.create!({full_name: "Example User", email: "owner@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964991291", role: 1, activated: true, activated_at: Time.zone.now})
+
+User.create!({full_name: "Example User", email: "user@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964992291", role: 2, activated: true, activated_at: Time.zone.now})
+
 99.times do |n|
   name  = Faker::Name.name
   user_id = 1

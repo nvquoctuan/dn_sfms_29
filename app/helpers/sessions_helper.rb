@@ -31,6 +31,13 @@ module SessionsHelper
     current_user.present?
   end
 
+  def check_logged_in
+    return if logged_in?
+
+    flash[:danger] = t "msg.login"
+    redirect_to root_path
+  end
+
   # Forgets a persistent session.
   def forget user
     user.forget

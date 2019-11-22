@@ -1,4 +1,33 @@
 vi:
+  helpers:
+    label:
+      pitch:
+        address: "Địa chỉ"
+        start_time: "Giờ bắt đầu"
+        end_time: "Giờ kết thúc"
+        city: "Tỉnh/Thành phố"
+        district: "Quận/Huyện"
+      user:
+        name: Tên
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        phone: Số điện thoại
+        male: Nam
+        female: Nữ
+      session:
+        email: Email
+        password: Mật khẩu
+    submit:
+      user:
+        create: Tạo tài khoản
+        update: Lưu thay đổi
+      session:
+        submit: Đăng nhập
+      password_reset:
+        submit: Tiếp tục
+      pitch:
+        search_pitch: "Tìm kiếm sân"
   layouts:
     admin:
       sidebar:
@@ -7,6 +36,9 @@ vi:
         manage: "Quản lý"
         link1: "Link1"
         link2: "Link2"
+        pitch: "Sân bóng"
+        review: "Review"
+        subpitch_type: "Loại sân"
       header:
         Admin: "Admin"
         home: "Trang chủ"
@@ -17,6 +49,8 @@ vi:
         profile: "Thông tin"
         lock: "Khóa tài khoản"
         logout: "Đăng xuất"
+        hello: "Xin chào: "
+        manage: "Quản lý"
       footer:
         link: "CoreUI"
         content1_html: "&copy; 2019 creativeLabs."
@@ -81,8 +115,6 @@ vi:
       address: "Address: "
     index:
       notification: "Không có sân bóng nào hợp lệ!"
-  generate:
-    page_title: "Sân bóng đá"
   users:
     id_unexist: ID không tồn tại!
     please_log_in: Vui lòng đăng nhập
@@ -107,6 +139,20 @@ vi:
       male: Nam
       female: Nữ
       title: "Đặt lịch sân bóng đá nhanh chóng"
+    index:
+      title: "Danh sách người dùng"
+      id: "#"
+      avatar: "Ảnh đại diện"
+      email: "email"
+      full_name: "Họ tên"
+      gender: "Giới tính"
+      phone: "Điện thoại"
+      activated: "Trạng thái"
+      option: "Tùy chọn"
+      search: "Tìm kiếm"
+    user:
+      edit: "Chỉnh sửa"
+      delete: "Xóa"
   account_activations:
     edit:
       account_activated: Tài khoản đã kích hoạt thành công!
@@ -142,35 +188,7 @@ vi:
     new:
       forgot_password: Quên mật khẩu
     email_address_not_found: Địa chỉ email chưa được đăng kí!
-  helpers:
-    label:
-      pitch:
-        address: "Địa chỉ"
-        start_time: "Giờ bắt đầu"
-        end_time: "Giờ kết thúc"
-        city: "Tỉnh/Thành phố"
-        district: "Quận/Huyện"
-      user:
-        name: Tên
-        email: Email
-        password: Mật khẩu
-        password_confirmation: Xác nhận mật khẩu
-        phone: Số điện thoại
-        male: Nam
-        female: Nữ
-      session:
-        email: Email
-        password: Mật khẩu
-    submit:
-      pitch:
-        search_pitch: "Tìm kiếm sân"
-      user:
-        create: Tạo tài khoản
-        update: Lưu thay đổi
-      session:
-        submit: Đăng nhập
-      password_reset:
-        submit: Tiếp tục
+
   user_mailer:
     account_activation_subject: Kích hoạt tài khoản
     account_activation:
@@ -225,5 +243,19 @@ vi:
       size: "Kích cỡ: %{add}"
       subpitch_type: "Loại sân: %{add}"
       desc: "Mô tả: %{add}"
+  admin:
+    pages:
+      home:
+        title: "Trang chủ admin"
   msg:
+    destroy_success: "Xóa thành công"
+    destroy_danger: "Xóa thất bại"
+    create_success: "Tạo thành công"
+    create_danger: "Tạo thất bại"
+    danger_permision: "Người dùng không có quyền"
     not_subpitch: "Không có sân nhỏ"
+  generate:
+    page_title: "Sân bóng đá"
+    title: "Sân bóng đá"
+    female: "Nữ"
+    male: "Nam"
