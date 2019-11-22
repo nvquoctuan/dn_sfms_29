@@ -2,8 +2,31 @@ en:
   users:
     show:
       title: "Quick schedule of football field"
-
   layouts:
+    admin:
+      sidebar:
+        home: "Home"
+        new: "NEW"
+        manage: "Manage"
+        pitch: "Pitch"
+        review: "Review"
+        subpitch_type: "Subpitch type"
+      header:
+        admin: "Admin"
+        home: "Home"
+        users: "Users"
+        settings: "Settings"
+        vn: "Vietnamese"
+        en: "English"
+        profile: "Profile"
+        lock: "Lock Account"
+        logout: "Logout"
+        hello: "Hello: "
+        english: "English"
+      footer:
+        link: "CoreUI"
+        content1_html: "&copy; 2019 creativeLabs."
+        content2_html: "Powered by&nbsp;"
     application:
       title: "Quick schedule of football field"
     header:
@@ -105,6 +128,7 @@ en:
       email_address_not_found: Email not found
     new:
       forgot_password: Forgot password
+      log_in: Login
     email_address_not_found: Email address is not registered!
   helpers:
     label:
@@ -160,3 +184,8 @@ en:
   oversize_upload: Maximum file upload capacity of 5MB. Please select a
     smaller file
   not_allow: You are not allowed
+  msg:
+    destroy_success: "Destroy success"
+    destroy_danger: "Destroy danger"
+    create_success: "Create success"
+    create_danger: "Destroy danger"

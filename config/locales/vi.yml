@@ -1,5 +1,28 @@
 vi:
   layouts:
+    admin:
+      sidebar:
+        home: "Trang chủ"
+        new: "MỚI"
+        manage: "Quản lý"
+        pitch: "Sân bóng"
+        review: "Review"
+        subpitch_type: "Loại sân"
+      header:
+        Admin: "Admin"
+        home: "Trang chủ"
+        users: "Người dùng"
+        settings: "Thiết lập"
+        vn: "Tiếng việt"
+        en: "Tiếng anh"
+        profile: "Thông tin"
+        lock: "Khóa tài khoản"
+        logout: "Đăng xuất"
+        hello: "Xin chào: "
+      footer:
+        link: "CoreUI"
+        content1_html: "&copy; 2019 creativeLabs."
+        content2_html: "Powered by&nbsp;"
     application:
       title: "Đặt lịch sân bóng đá nhanh chóng"
     header:

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   root "static_pages#home"
 
+  namespace :admin do
+    root "pages#home"
+    resources :users
+    get "/logout", to: "sessions#destroy"
+  end
+
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"

@@ -70,3 +70,4 @@ yarn-debug.log*
 soccer_db
 soccer_dev
 /vendor
+/config/application.yml

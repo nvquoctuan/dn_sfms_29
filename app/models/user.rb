@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save{email.downcase!}
   before_create :create_activation_digest
@@ -25,6 +26,16 @@ class User < ApplicationRecord
     {minimum: Settings.password_min}, allow_nil: true
   validates :password, presence: true, length:
     {minimum: Settings.password_min}, on: :update_info
+
+  enum role: {admin: 0, owner: 1, user: 2}
+  scope :order_active, ->{order("activated DESC")}
+  scope(:search, lambda do |search|
+    if search
+      where("full_name LIKE ? OR email LIKE ?", "%#{search}%", "%#{search}%")
+    else
+      all
+    end
+  end)
 
   class << self
     # Returns the hash digest of the given string.
