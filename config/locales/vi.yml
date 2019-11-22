@@ -26,6 +26,18 @@ vi:
       subpitch_type:
         name: "Tên loại sân bóng"
         Description: "Mô tả"
+      subpitch:
+        name: "Tên sân nhỏ"
+        desription: "Mô tả"
+        status: "Trạng thái"
+        pitch: "Sân bóng"
+        pitch_id: "Sân bóng"
+        price_per_hour: "Giá một giờ"
+        currency: "Tiền tệ"
+        picture: "Hình ảnh"
+        size: "Kích cỡ"
+        subpitch_type: "Loại sân"
+        subpitch_type_id: "Loại sân"
     submit:
       user:
         create: Tạo tài khoản
@@ -40,6 +52,9 @@ vi:
         update: "Cập nhật sân bóng"
       subpitch_type:
         create: "Tạo loại sân bóng"
+      subpitch:
+        create: "Tạo sân nhỏ"
+        update: "Cập nhật sân nhỏ"
   activerecord:
     attributes:
       user:
@@ -173,6 +188,9 @@ vi:
         city: "Thành phố: %{add}"
         start_time: "Giờ bắt đầu: %{add}"
         end_time: "Giờ kết thúc: %{add}"
+        edit: "Chỉnh sửa"
+        back: "Trở về"
+        new_subpitch: "Tạo mới sân nhỏ"
       index:
         search: "Tìm kiếm"
         new: "Tạo mới sân bóng"
@@ -189,9 +207,50 @@ vi:
         end_time: "Giờ kết thúc"
         option: "Tùy chọn"
       pitch:
+        subpitch: "Sân nhỏ"
         edit: "Chỉnh sửa"
         delete: "Xóa"
         confirm: "Bạn chắc chứ?"
+      subpitches:
+        danger_load: "Tải thất bại"
+        show:
+          pitch_name_html: "Tên sân bóng: <b>%{add}</b>"
+          name_html: "Tên sân nhỏ: <b>%{add}</b>"
+          price_html: "Giá một giờ: <b>%{add}</b>"
+          currency_html: "Tiền tệ: <b>%{add}</b>"
+          desc_html: "Mô tả: <b>%{add}</b>"
+          subpitch_type_html: "Loại sân nhỏ: <b>%{add}</b>"
+          size_html: "Kích cỡ: <b>%{add}</b>"
+        create:
+          success: "Tạo thành công"
+          danger: "Tạo thất bại"
+        update:
+          success: "Cập nhật thành công"
+          danger: "Cập nhật thất bại"
+        destroy:
+          success: "Xóa thành công"
+          danger: "Xóa thất bại"
+        new:
+          title: "Tạo sân nhỏ"
+        edit:
+          title: "Chỉnh sửa sân nhỏ"
+        index:
+          new: "Tạo mới"
+          title: "Danh sách sân nhỏ"
+          id: "#"
+          pitch_name: "Tên sân bóng"
+          subpitch_type: "Loại sân bóng"
+          name: "Tên sân nhỏ"
+          description: "Mô tả"
+          price: "Giá"
+          currency: "Tiền tệ"
+          picture: "Hình ảnh"
+          size: "Kích cỡ"
+          option: "Tùy chọn"
+        subpitch:
+          edit: "Chỉnh sửa"
+          delete: "Xóa"
+          confirm: "Bạn chắc chứ?"
     pages:
       home:
         title: "Trang chủ admin"
@@ -336,18 +395,22 @@ vi:
     destroy_danger: "Xóa thất bại"
     create_success: "Tạo thành công"
     create_danger: "Tạo thất bại"
-    update_success: "Update success"
-    update_danger: "Update danger"
+    update_success: "Cập nhật thành công"
+    update_danger: "Cập nhật thất bại"
     danger_permision: "Người dùng không có quyền"
     not_subpitch: "Không có sân nhỏ"
     not_pitch: "Không có sân lớn"
     play_time_invalid: "Giờ mở cửa không hợp lệ"
+    pitch_not_exists: "Sân bóng không tồn tại"
   generate:
     page_title: "Sân bóng đá"
     title: "Sân bóng đá"
     female: "Nữ"
     male: "Nam"
     back: "Back"
+  general:
+    edit: "Chỉnh sửa"
+    back: "Trở về"
   will_paginate:
     previous_labels: "Trang trước"
     next_label: "Trang sau"

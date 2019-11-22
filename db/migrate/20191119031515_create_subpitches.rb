@@ -5,7 +5,7 @@ class CreateSubpitches < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :status, default: 0
       t.references :pitch, null: false, foreign_key: true
-      t.decimal :price_per_hour
+      t.decimal :price_per_hour, precision: 10, scale: 0
       t.string :currency
       t.text :picture
       t.string :size

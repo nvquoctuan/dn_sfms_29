@@ -1,7 +1,8 @@
 class Admin::PitchesController < AdminController
   before_action :load_pitch, except: %i(index new create)
+  before_action :load_subpitch, only: :show
   before_action :load_pitch_admin, :load_pitch_owner, only: :index
-  before_action :check_pitch_owner, only: %i(edit update destroy)
+  before_action ->{check_pitch_owner(@pitch)}, only: %i(edit update destroy)
 
   def index; end
 
@@ -53,6 +54,13 @@ class Admin::PitchesController < AdminController
     redirect_to admin_pitches_path
   end
 
+  def load_subpitch
+    @subpitches = Subpitch.by_pitch(@pitch.id)
+                          .search(params[:search])
+                          .paginate page: params[:page],
+                           per_page: Settings.size.s10
+  end
+
   def pitch_params
     params.require(:pitch).permit Pitch::PARAMS
   end
@@ -70,13 +78,5 @@ class Admin::PitchesController < AdminController
     @pitches = Pitch.search(params[:search]).newest
                     .by_user(current_user.id)
                     .paginate page: params[:page], per_page: Settings.size.s10
-  end
-
-  def check_pitch_owner
-    return unless check_owner?
-    return if @pitch.user_id == current_user.id
-
-    flash[:danger] = t "msg.danger_permission"
-    redirect_to admin_pitches_path
   end
 end

@@ -26,6 +26,18 @@ en:
       subpitch_type:
         name: "Name"
         description: "Desciption"
+      subpitch:
+        name: "Name"
+        desription: "Description"
+        status: "Status"
+        pitch: "Pitch"
+        pitch_id: "Pitch"
+        price_per_hour: "Price per hour"
+        currency: "Currency"
+        picture: "Picture"
+        size: "Size"
+        subpitch_type: "Subpitch type"
+        subpitch_type_id: "Subpitch type"
     submit:
       user:
         create: Create
@@ -40,6 +52,9 @@ en:
         update: "Update Pitch"
       subpitch_type:
         create: "Create Subpitch Type"
+      subpitch:
+        create: "Create Subpitch"
+        update: "Update Subpitch"
   activerecord:
     attributes:
       user:
@@ -214,6 +229,9 @@ en:
         city: "City: %{add}"
         start_time: "Start_time: %{add}"
         end_time: "End_time: %{add}"
+        edit: "Chỉnh sửa"
+        back: "Trở về"
+        new_subpitch: "Tạo mới sân nhỏ"
       index:
         search: "Search"
         new: "New pitch"
@@ -234,6 +252,46 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "You sure?"
+      subpitches:
+        danger_load: "Load failure"
+        show:
+          pitch_name_html: "Pitch name: <b>%{add}</b>"
+          name_html: "Subpitch name: <b>%{add}</b>"
+          price_html: "Price per hour: <b>%{add}</b>"
+          currency_html: "Currency: <b>%{add}</b>"
+          desc_html: "Description: <b>%{add}</b>"
+          subpitch_type_html: "Subpitch type: <b>%{add}</b>"
+          size_html: "Size: <b>%{add}</b>"
+        create:
+          success: "Create success"
+          danger: "Create danger"
+        update:
+          success: "Update success"
+          danger: "Update danger"
+        destroy:
+          success: "Destroy success"
+          danger: "Destroy danger"
+        new:
+          title: "New subpitch"
+        edit:
+          title: "Edit subpitch"
+        index:
+          new: "New"
+          title: "List Subpitch"
+          id: "#"
+          pitch_name: "Pitch name"
+          subpitch_type: "Subpitch type"
+          name: "Name"
+          description: "Description"
+          price: "Price"
+          currency: "Currency"
+          picture: "Picture"
+          size: "Size"
+          option: "Option"
+        subpitch:
+          edit: "Edit"
+          delete: "Delete"
+          confirm: "You sure?"
     pages:
       home:
         title: "Home admin"
@@ -340,6 +398,9 @@ en:
     male: "Male"
     page_title: "soccer fields"
     back: "Back"
+  general:
+    edit: "Edit"
+    back: "Back"
   msg:
     destroy_success: "Destroy success"
     destroy_danger: "Destroy danger"
@@ -351,4 +412,5 @@ en:
     not_subpitch: "Not subpitch"
     not_pitch: "Not_pitch"
     danger_permission: "User not permission"
-    play_time_invalid: "Giờ mở cửa không hợp lệ"
+    play_time_invalid: "Play time invalid"
+    pitch_not_exists: "Pitch not exists"

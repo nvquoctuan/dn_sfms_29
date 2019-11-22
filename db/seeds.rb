@@ -5,41 +5,41 @@ User.create!({full_name: "Example User", email: "user@soccer.vn", password: "adm
 
 99.times do |n|
   name  = Faker::Name.name
-  user_id = 1
-  description = Faker::Name.name
+  description = Faker::Lorem.sentence
   address = Faker::Address.street_address
-  Pitch.create!({user_id: 1,
-           name: name,
-           description: description,
-           country: "VN",
-           city: "Da nang",
-           phone: "5555555555",
-           district: "Hai chau",
-           address: address,
-           limit: 2})
+  start_time = DateTime.strptime("05:30 +07:00", "%H:%M %z")
+  end_time = DateTime.strptime("23:30 +07:00", "%H:%M %z")
+
+  Pitch.create!(
+    name: name,
+    user_id: 2,
+    description: description,
+    country: "vn",
+    address: address,
+    phone: "111111111",
+    city:Faker::Address.city,
+    district: Faker::Address.state,
+    start_time: start_time,
+    end_time: end_time,
+    limit: 2
+  )
 end
 
-5.times do |n|
-  name  = Faker::Name.name
-  description = Faker::Name.name
-  address = Faker::Address.street_address
-  Pitch.create!({user_id: 2,
-           name: name,
-           description: description,
-           country: "vn",
-           city: "Da nang",
-           phone: "5555555555",
-           district: "Hai chau",
-           address: address,
-           limit: 2})
-end
 SubpitchType.create!({name: "loai vip", description: "mo ta loai vip"})
 
-pitches = Pitch.all
-pitches.each do |pitch|
-  name  = Faker::Name.name
-  user_id = 1
-  description = Faker::Name.name
-  address = Faker::Address.street_address
-  Subpitch.create!(name: name, description: description, pitch_id: pitch.id, subpitch_type_id: 1)
+SubpitchType.create!({name:  "SubpitchType 1",
+           description: "Day la mot ta 1"})
+
+50.times do |n|
+  name = "Subpitch_#{n}"
+  desc = "Day la mot ta #{n}"
+  size = "5 người"
+
+  Subpitch.create!({
+           name: name,
+           description: desc,
+           pitch_id: 1,
+           price_per_hour: 1000000.0,
+           size: size,
+           subpitch_type_id: 1})
 end

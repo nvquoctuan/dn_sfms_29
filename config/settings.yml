@@ -36,3 +36,4 @@ size:
   s1: 1
   x100: '100x100'
   pitch: '500x300'
+resizie_limit: [100, 100]
