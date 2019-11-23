@@ -1,0 +1,23 @@
+<% if check_parent comment %>
+<div class="col-lg-12 parent_comment" style="margin-bottom:10px" id="<%= "parent_#{comment.id}" %>" >
+  <% if current_user.avatar.attached? %>
+    <div style="float:left; margin-right: 10px;">
+      <%= image_tag current_user.avatar, style: "border-radius: 50%; width: 50px; height: 50px"  %>
+    </div>
+  <% end %>
+  <div style="float:left">
+    <span style="float:left; margin-right: 10px;"><%= current_user.full_name %></span>
+    <li class = "parent_comment_li" style="float:left; text-align:left">
+      <p>
+        <span><%= comment.content %></span>
+
+        <%= link_to t(".answer"), new_pitch_subpitch_comment_path(@pitch, @subpitch, id_parent: comment.id), remote: true %>
+        <% if current_user? comment.user %>
+        <%= link_to t(".del"), pitch_subpitch_comment_path(@pitch, @subpitch, comment), method: :delete, remote: true, data: {confirm: t(".confirm")}, style: " padding-left:10px" %>
+        <% end %>
+      </p>
+      <%= render partial: "subpitches/comments/children_comment", collection: comments_child(comment.id) %>
+    </li>
+  </div>
+</div>
+<% end %>

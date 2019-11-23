@@ -8,6 +8,8 @@ class SubpitchesController < ApplicationController
 
   def show
     @comment = Comment.new
+    @comments = @subpitch.comments.last_comment
+    @params_subpitch = params[:id] || params[:subpitch_id]
   end
 
   private

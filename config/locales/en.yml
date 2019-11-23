@@ -107,3 +107,24 @@ en:
       size: "Size: %{add}"
       subpitch_type: "Subpitch type: %{add}"
       desc: "Description: %{add}"
+    comments:
+      danger_exists_user: "User not exists"
+      danger_exists_pitch: "Pitch not exists"
+      danger_exists_subpitch: "Subpitch not exists"
+      danger_comment: "Danger comment"
+      comment:
+        answer: "Answer"
+        del: "Delete"
+        confirm: "You sure?"
+      children_comment:
+        answer: "Answer"
+        del: "Delete"
+        confirm: "You sure?"
+      form:
+        comment: "Comment"
+        content: "Content"
+    msg:
+      create_success: "Create success"
+      create_danger: "Create danger"
+      destroy_success: "Destroy success"
+      destroy_danger: "Destroy danger"

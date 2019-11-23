@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
   resources :users
   resources :pitches, only: :index do
-    resources :subpitches, only: %i(index show)
+    resources :subpitches, only: %i(index show) do
+      resources :comments, controller: "subpitches/comments"
+    end
   end
 end

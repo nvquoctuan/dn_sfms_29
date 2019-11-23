@@ -107,3 +107,24 @@ vi:
       size: "Kích cỡ: %{add}"
       subpitch_type: "Loại sân: %{add}"
       desc: "Mô tả: %{add}"
+    comments:
+      danger_exists_user: "Người dùng không tồn tại"
+      danger_exists_pitch: "Sân bóng không tồn tại"
+      danger_exists_subpitch: "Sân nhỏ không tồn tại"
+      danger_comment: "Comment lỗi"
+      comment:
+        answer: "Trả lời"
+        del: "Xóa"
+        confirm: "Bạn chắc chứ?"
+      children_comment:
+        answer: "Trả lời"
+        del: "Xóa"
+        confirm: "Bạn chắc chứ?"
+      form:
+        comment: "Bình luận"
+        content: "Nội dung"
+    msg:
+      create_success: "Tạo thành công"
+      create_danger: "Tạo thất bại"
+      destroy_success: "Xóa thành công"
+      destroy_danger: "Xóa thất bai"

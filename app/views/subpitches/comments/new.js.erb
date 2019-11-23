@@ -1,0 +1,7 @@
+$('ul').find('.new_comment').remove();
+if($('<%= "#parent_#{params[:id_parent]}" %>').parents('.parent_comment_li').length){
+  $('<%= "#parent_#{params[:id_parent]}" %>').parents('.parent_comment').append('<%= j render("subpitches/comments/form", locals: {comment: @comment, params_subpitch: @params_subpitch}) %>');
+}
+else {
+  $('<%= "#parent_#{params[:id_parent]}" %>').append('<%= j render("subpitches/comments/form", locals: {comment: @comment, params_subpitch: @params_subpitch}) %>');
+}

@@ -1,0 +1,9 @@
+<% byebug %>
+<% if @status %>
+  $('<%= "#parent_#{@comment.id}" %>').remove();
+<% else %>
+  $('<%= "#parent_#{@comment.id}" %>').remove();
+  if($('<%= "#parent_comment_#{@comment.id}" %>')) {
+    $('<%= "#parent_comment_#{@comment.id}" %>').remove();
+  }
+<% end %>

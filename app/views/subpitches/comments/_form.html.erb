@@ -1,0 +1,7 @@
+<%= form_for @comment, url: pitch_subpitch_comments_path(params[:pitch_id], @params_subpitch), html: {style: "float: left; width: 100%"}, remote: true do |f| %>
+  <%= f.text_area :content, placeholder: t(".content"), style: "width: 60%" %>
+  <%= f.submit t(".comment"), class: "btn btn-pill btn-block btn-success", style: "width: 50%; margin: 0 auto" %>
+  <%= hidden_field_tag "comment[user_id]", current_user.id %>
+  <%= hidden_field_tag "comment[subpitch_id]", @params_subpitch %>
+  <%= hidden_field_tag "comment[id_parent]", params[:id_parent] %>
+<% end %>

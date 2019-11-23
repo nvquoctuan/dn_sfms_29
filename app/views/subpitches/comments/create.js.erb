@@ -1,0 +1,11 @@
+if($('.new_comment').parents('.parent_comment').length){
+  $('<%= "#parent_#{@comment_parent}" %>').find('.parent_comment2').remove();
+
+ $('<%= "#parent_#{@comment_parent}" %>').find('.parent_comment_li').append('<%= j render(partial: "subpitches/comments/children_comment", collection: comments_child(@comment_parent)) %>')
+
+  $('.parent_comment').children('.new_comment').remove()
+}
+else {
+  $('#list_comment').prepend('<%= j render("subpitches/comments/comment", comment: @comment) %>')
+  $('#comment_content').val(null)
+}
