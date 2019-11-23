@@ -204,3 +204,24 @@ en:
   oversize_upload: Maximum file upload capacity of 5MB. Please select a
     smaller file
   not_allow: You are not allowed
+  subpitches:
+    danger_load: "Load failure"
+    danger_load_subpitch: "Load failure Subpitch"
+    show:
+      name: "Name: %{add}"
+      price_per_hour: "Price per hour: %{add}"
+      currency: "Currency: %{add}"
+      size: "Size: %{add}"
+      subpitch_type: "Subpitch type: %{add}"
+      desc: "Description: %{add}"
+      content: "Comment here"
+      comment: "Comment"
+    subpitch:
+      name: "Name: %{add}"
+      price_per_hour: "Price per hour: %{add}"
+      currency: "Currency: %{add}"
+      size: "Size: %{add}"
+      subpitch_type: "Subpitch type: %{add}"
+      desc: "Description: %{add}"
+  msg:
+    not_subpitch: "Not subpitch"

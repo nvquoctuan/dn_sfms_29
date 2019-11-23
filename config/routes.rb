@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-
   namespace :admin do
     root "pages#home"
   end
@@ -14,6 +13,9 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
   resources :password_resets, except: :index
-  resources :users
   resources :account_activations, only: :edit
+  resources :users
+  resources :pitches, only: :index do
+    resources :subpitches, only: %i(index show)
+  end
 end

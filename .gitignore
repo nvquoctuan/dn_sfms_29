@@ -61,10 +61,14 @@ yarn-debug.log*
 /node_modules
 /public
 /Gemfile.lock
-/config/application.yml
-config/settings.local.yml
 soccer_db
 soccer_dev
 .rubocop.yml
 .rubocop_enabled.yml
 .rubocop_disabled.yml
+
+# Ignore application configuration
+/config/application.yml
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
