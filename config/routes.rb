@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "/logout", to: "sessions#destroy"
   resources :users
+  resources :pitches, only: :index do
+    resources :subpitches, only: %i(index show)
+  end
 end
