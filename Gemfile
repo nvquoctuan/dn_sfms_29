@@ -3,11 +3,15 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.6.3"
 
+gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "~> 3.4.1"
 gem "config"
+gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"
 gem "jquery-rails"
+gem "omniauth"
+gem "omniauth-facebook"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.0"
 gem "rails-i18n"

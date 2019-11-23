@@ -1,6 +1,7 @@
 *.gem
 *.rbc
 /.config
+!/.config/certs
 /coverage/
 /InstalledFiles
 /pkg/
@@ -66,3 +67,5 @@ yarn-debug.log*
 /node_modules
 /public
 /Gemfile.lock
+soccer_db
+soccer_dev
