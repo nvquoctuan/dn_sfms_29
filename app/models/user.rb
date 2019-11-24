@@ -10,6 +10,7 @@ class User < ApplicationRecord
   VALID_PHONE_REGEX = /\A[\d]{10,}\z/i.freeze
   has_one_attached :avatar
   has_many :pitches, dependent: :destroy
+  has_many :likes, dependent: :destroy
   validates :full_name, presence: true,
     length: {maximum: Settings.name_in_users_max}
   validates :email, presence: true,

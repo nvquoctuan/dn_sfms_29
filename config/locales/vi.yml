@@ -430,6 +430,9 @@ vi:
       size: "Kích cỡ: %{add}"
       subpitch_type: "Loại sân: %{add}"
       desc: "Mô tả: %{add}"
+    likes:
+      count:
+        like: "Like(%{add})"
   msg:
     destroy_success: "Xóa thành công"
     destroy_danger: "Xóa thất bại"
@@ -460,3 +463,4 @@ vi:
   will_paginate:
     previous_labels: "Trang trước"
     next_label: "Trang sau"
+

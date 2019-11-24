@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
   resources :users
   resources :pitches, only: :index do
-    resources :subpitches, only: %i(index show)
+    resources :subpitches, only: %i(index show) do
+      resources :likes, only: %i(create destroy), controller: "subpitches/likes"
+    end
   end
 end
