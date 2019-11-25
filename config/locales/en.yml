@@ -220,7 +220,7 @@ en:
         success: "Destroy success"
         danger: "Destroy danger"
       show:
-        title: "%{name} Pitch"
+        title: "%{add} Pitch"
         owner: "Owner: %{add}"
         name: "Name pitch: %{add}"
         description: "description: %{add}"
@@ -330,6 +330,24 @@ en:
           edit: "Edit"
           delete: "Delete"
           confirm: "You sure?"
+    subpitches:
+      ratings:
+        index:
+          title: "List ratings"
+          subpitch: Subpitch name
+          id: "#"
+          user: "user"
+          star: "star"
+          content: "content"
+          option: "option"
+        show:
+          title: "List ratings"
+          subpitch: Subpitch name
+          id: "#"
+          user: "user"
+          star: "star"
+          content: "content"
+          option: "option"
     pages:
       home:
         title: "Home admin"
@@ -356,6 +374,7 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "You sure?"
+        rating: "Rating"
   shared:
     error_messages:
       error:
@@ -446,6 +465,9 @@ en:
   general:
     edit: "Edit"
     back: "Back"
+    search: "Search"
+    delete: "Delete"
+    confirm: "You sure?"
   msg:
     destroy_success: "Destroy success"
     destroy_danger: "Destroy danger"
