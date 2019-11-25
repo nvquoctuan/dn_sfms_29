@@ -8,5 +8,6 @@
   <td><%= subpitch.size %></td>
   <td>
     <%= link_to t(".edit"), edit_admin_pitch_subpitch_path(subpitch.pitch.id, subpitch), class: "btn btn-primary" %>
-    <%= link_to t(".delete"), admin_pitch_subpitch_path(subpitch.pitch.id, subpitch), class: "btn btn-danger", method: :delete, data: {confirm: t(".confirm")} %></td>
+    <%= link_to t(".delete"), admin_pitch_subpitch_path(subpitch.pitch.id, subpitch), class: "btn btn-danger", method: :delete, data: {confirm: t(".confirm")} %>
+  </td>
 </tr>

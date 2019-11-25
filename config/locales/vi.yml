@@ -294,6 +294,24 @@ vi:
           edit: "Chỉnh sửa"
           delete: "Xóa"
           confirm: "Bạn chắc chứ?"
+    subpitches:
+      ratings:
+        index:
+          title: "Danh sách đánh giá"
+          subpitch: Sân nhỏ
+          id: "#"
+          user: "Người dùng"
+          star: "Sao"
+          content: "Nội dung"
+          option: "Tùy chọn"
+        show:
+          title: "Danh sách đánh giá"
+          subpitch: Sân nhỏ
+          id: "#"
+          user: "Người dùng"
+          star: "Sao"
+          content: "Nội dung"
+          option: "Tùy chọn"
     pages:
       home:
         title: "Trang chủ admin"
@@ -320,6 +338,14 @@ vi:
         edit: "Chỉnh sửa"
         delete: "Xóa"
         confirm: "Bạn chắc chứ?"
+        rating: "Đánh giá"
+      ratings:
+        index:
+          id: "#"
+          user: "user"
+          star: "star"
+          content: "content"
+          option: "option"
   users:
     id_unexist: ID không tồn tại!
     please_log_in: Vui lòng đăng nhập
@@ -460,6 +486,9 @@ vi:
   general:
     edit: "Chỉnh sửa"
     back: "Trở về"
+    search: "Search"
+    delete: "Delete"
+    confirm: "You sure?"
   will_paginate:
     previous_labels: "Trang trước"
     next_label: "Trang sau"

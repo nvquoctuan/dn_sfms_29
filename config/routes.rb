@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get "/revenue", to: "pitches/revenues#index", on: :collection
       get "/revenue", to: "pitches/revenues#show", on: :member
     end
+    resources :ratings, only: %i(index destroy), controller: "subpitches/ratings"
   end
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
