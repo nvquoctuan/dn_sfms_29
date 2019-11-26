@@ -3,6 +3,7 @@ class Subpitch < ApplicationRecord
             picture size pitch_id subpitch_type_id).freeze
   belongs_to :pitch
   belongs_to :subpitch_type
+  has_many :bookings, dependent: :destroy
 
   validates :name, presence: true, length: {maximum: Settings.size.s50}
   validates :description, length: {maximum: Settings.size.s255}
@@ -18,4 +19,10 @@ class Subpitch < ApplicationRecord
   end)
 
   scope :by_pitch, ->(pitch_id){where pitch_id: pitch_id}
+
+  scope :revenue_subpitch, (lambda do |pitch|
+    joins(:bookings).where("subpitches.pitch_id = ?", pitch)
+                    .select("subpitches.*, sum(bookings.total_price) as total")
+                    .group("subpitches.id")
+  end)
 end

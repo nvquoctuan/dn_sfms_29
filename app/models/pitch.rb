@@ -27,8 +27,34 @@ class Pitch < ApplicationRecord
   end)
 
   scope :newest, ->{order(created_at: :desc)}
+  scope :revenue_pitch, (lambda do
+    joins(subpitches: :bookings)
+    .select("pitches.*, sum(total_price) as total").group("pitches.id")
+  end)
 
-  scope :by_user, ->(id_user){where("user_id = ?", id_user)}
+  scope :search_pitch, (lambda do |search|
+    where("(pitches.name LIKE ?) OR (pitches.city LIKE ?) OR
+            (pitches.district LIKE ?) OR (address LIKE ?)",
+          "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+  end)
+  scope :active_booking, (lambda do
+    where bookings: {status: Booking.statuses["Verifiled_paid"]}
+  end)
+
+  scope :order_pitch, ->(order){order(total: order) if order}
+  scope :month_revenue, (lambda do |month|
+    return unless month
+
+    where("(MONTH(bookings.start_time) = ?)
+           AND (MONTH(bookings.end_time = ?))", month, month)
+  end)
+
+  scope :year_revenue, (lambda do |year|
+    return unless year
+
+    where("(YEAR(bookings.start_time) = ?) AND (YEAR(bookings.end_time = ?))",
+          year, year)
+  end)
 
   private
 

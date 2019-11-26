@@ -1,4 +1,24 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        full_name: Tên
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        phone: Số điện thoại
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: không thể để trắng
+            phone:
+              invalid: chỉ bao gồm số và phải từ 10 kí tự trở lên
+        pitch:
+          attributes:
+            end_time:
+              after: "phải lớn hơn giờ bắt đầu."
   helpers:
     label:
       pitch:
@@ -55,26 +75,11 @@ vi:
       subpitch:
         create: "Tạo sân nhỏ"
         update: "Cập nhật sân nhỏ"
-  activerecord:
-    attributes:
-      user:
-        full_name: Tên
-        email: Email
-        password: Mật khẩu
-        password_confirmation: Xác nhận mật khẩu
-        phone: Số điện thoại
-    errors:
-      models:
-        user:
-          attributes:
-            name:
-              blank: không thể để trắng
-            phone:
-              invalid: chỉ bao gồm số và phải từ 10 kí tự trở lên
-        pitch:
-          attributes:
-            end_time:
-              after: "phải lớn hơn giờ bắt đầu."
+  shared:
+    error_messages:
+      count:
+        one: "1 error"
+        other: "%{count} errors"
   layouts:
     admin:
       sidebar:
@@ -211,6 +216,44 @@ vi:
         edit: "Chỉnh sửa"
         delete: "Xóa"
         confirm: "Bạn chắc chứ?"
+        subpitch: "Sân nhỏ"
+      revenues:
+        index:
+          title: "Doanh thu sân bóng"
+          id: "#"
+          user: "Chủ sân"
+          name: "Tên sân bóng"
+          description: "Mô tả"
+          country: "Quốc gia"
+          city: "Thành phố"
+          district: "Quận/Huyện"
+          phone: "Điện thoại"
+          picture: "Hình ảnh"
+          start_time: "Giờ mở cửa"
+          end_time: "Giờ đóng cửa"
+          limit: "Limit"
+          total: "Tổng"
+          option: "Tùy chọn"
+        revenue:
+          subpitch: "Sân nhỏ"
+        show:
+          asc: "asc"
+          desc: "desc"
+          asc_total: "Tổng tiền tăng dần"
+          desc_total: "Tổng tiền giảm dầm"
+          new: "Tạo mới"
+          title: "Chi tiết doanh thu"
+          id: "#"
+          pitch_name: "Tên sân bóng"
+          subpitch_type: "Loại sân bóng"
+          name: "Tên sân nhỏ"
+          description: "Mô tả"
+          price: "Giá"
+          currency: "Tiền tệ"
+          picture: "Hình ảnh"
+          size: "Kích cỡ"
+          option: "Tùy chọn"
+          total: "Tổng tiền"
       subpitches:
         danger_load: "Tải thất bại"
         show:
@@ -321,9 +364,6 @@ vi:
     edit:
       account_activated: Tài khoản đã kích hoạt thành công!
       invalid_activation_link: Link kích hoạt không hợp lệ!
-  shared:
-    error_messages:
-      error: "Form có %{count} lỗi"
   sessions:
     new:
       sign_up: Đăng kí ngay!
@@ -402,12 +442,18 @@ vi:
     not_pitch: "Không có sân lớn"
     play_time_invalid: "Giờ mở cửa không hợp lệ"
     pitch_not_exists: "Sân bóng không tồn tại"
+    danger_permission: "Lỗi phân quyền"
+    destroy_danger: "Xóa lỗi"
   generate:
     page_title: "Sân bóng đá"
     title: "Sân bóng đá"
     female: "Nữ"
     male: "Nam"
     back: "Back"
+    asc: "asc"
+    desc: "desc"
+    asc_total: "Tổng tiền tăng dần"
+    desc_total: "Tổng tiền giảm dầm"
   general:
     edit: "Chỉnh sửa"
     back: "Trở về"
