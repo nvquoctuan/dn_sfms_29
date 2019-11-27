@@ -1,4 +1,25 @@
 en:
+  helpers:
+    label:
+      user:
+        name: Name
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        phone: Phone
+        male: Male
+        female: Female
+      session:
+        email: Email
+        password: Password
+    submit:
+      user:
+        create: Create
+        update: Update
+      session:
+        submit: Login
+      password_reset:
+        submit: Continue
   users:
     show:
       title: "Quick schedule of football field"
@@ -11,6 +32,7 @@ en:
         pitch: "Pitch"
         review: "Review"
         subpitch_type: "Subpitch type"
+        booking: "Booking"
       header:
         admin: "Admin"
         home: "Home"
@@ -130,27 +152,6 @@ en:
       forgot_password: Forgot password
       log_in: Login
     email_address_not_found: Email address is not registered!
-  helpers:
-    label:
-      user:
-        name: Name
-        email: Email
-        password: Password
-        password_confirmation: Password confirmation
-        phone: Phone
-        male: Male
-        female: Female
-      session:
-        email: Email
-        password: Password
-    submit:
-      user:
-        create: Create
-        update: Update
-      session:
-        submit: Login
-      password_reset:
-        submit: Continue
   user_mailer:
     account_activation_subject: Activate account
     account_activation:

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root "pages#home"
     resources :users
     get "/logout", to: "sessions#destroy"
+    resources :bookings
   end
 
   post "/login", to: "sessions#create"

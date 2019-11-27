@@ -1,4 +1,25 @@
 vi:
+  helpers:
+    label:
+      user:
+        name: Tên
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        phone: Số điện thoại
+        male: Nam
+        female: Nữ
+      session:
+        email: Email
+        password: Mật khẩu
+    submit:
+      user:
+        create: Tạo tài khoản
+        update: Lưu thay đổi
+      session:
+        submit: Đăng nhập
+      password_reset:
+        submit: Tiếp tục
   layouts:
     admin:
       sidebar:
@@ -8,6 +29,7 @@ vi:
         pitch: "Sân bóng"
         review: "Review"
         subpitch_type: "Loại sân"
+        booking: "Đặt"
       header:
         Admin: "Admin"
         home: "Trang chủ"
@@ -126,27 +148,7 @@ vi:
     new:
       forgot_password: Quên mật khẩu
     email_address_not_found: Địa chỉ email chưa được đăng kí!
-  helpers:
-    label:
-      user:
-        name: Tên
-        email: Email
-        password: Mật khẩu
-        password_confirmation: Xác nhận mật khẩu
-        phone: Số điện thoại
-        male: Nam
-        female: Nữ
-      session:
-        email: Email
-        password: Mật khẩu
-    submit:
-      user:
-        create: Tạo tài khoản
-        update: Lưu thay đổi
-      session:
-        submit: Đăng nhập
-      password_reset:
-        submit: Tiếp tục
+
   user_mailer:
     account_activation_subject: Kích hoạt tài khoản
     account_activation:

@@ -6,6 +6,14 @@ class AdminController < ApplicationController
 
   private
 
+  def check_owner?
+    current_user.owner?
+  end
+
+  def check_admin?
+    current_user.admin?
+  end
+
   def check_admin
     return if current_user.admin?
 
