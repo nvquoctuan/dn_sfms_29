@@ -3,7 +3,7 @@ class CreateSubpitches < ActiveRecord::Migration[6.0]
     create_table :subpitches do |t|
       t.string :name
       t.string :description
-      t.integer :status
+      t.integer :status, default: 0
       t.references :pitch, null: false, foreign_key: true
       t.decimal :price_per_hour
       t.string :currency
