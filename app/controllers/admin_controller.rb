@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_action :authenticate_user!, :check_user
+  before_action :check_logged_in, :check_user
   layout "admin/application"
 
   private

@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   before_action :admin_user, only: %i(destroy index)
 
   def index
-    @users = User.order_active.search(params[:search])
+    @users = User.order_active.search_full_name(params[:search])
+                 .or(User.order_active.search_email(params[:search]))
                  .paginate page: params[:page], per_page: Settings.size.s10
   end
 

@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  before_create :create_activation_digest
-  attr_accessor :remember_token, :activation_token, :reset_token
   DATA_TYPE_USERS = %i(full_name email password password_confirmation).freeze
   DATA_TYPE_UPDATE_PROFILE =
     %i(full_name phone gender password password_confirmation).freeze
@@ -8,9 +6,12 @@ class User < ApplicationRecord
   DATA_TYPE_RESETS_PASSWORD = %i(password password_confirmation).freeze
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
   VALID_PHONE_REGEX = /\A[\d]{10,}\z/i.freeze
-  has_one_attached :avatar
+
+  attr_accessor :remember_token, :activation_token, :reset_token
+
   has_many :pitches, dependent: :destroy
   has_many :likes, dependent: :destroy
+
   validates :full_name, presence: true,
     length: {maximum: Settings.name_in_users_max}
   validates :email, presence: true,
@@ -21,14 +22,23 @@ class User < ApplicationRecord
   validates :phone, format: {with: VALID_PHONE_REGEX}, allow_blank: true
   validates :gender, inclusion: {in: [true, false],
                                  message: "Gender is valid"}, allow_nil: true
-  has_secure_password
   validates :password, presence: true, length:
     {minimum: Settings.password_min}, allow_nil: true
   validates :password, presence: true, length:
     {minimum: Settings.password_min}, on: :reset_password
 
+  before_create :create_activation_digest
+
   enum role: {admin: 0, owner: 1, user: 2}
+  has_one_attached :avatar
+  has_secure_password
+
   scope :order_active, ->{order activated: :desc}
+  scope :search_full_name, ->search{where "full_name LIKE ?", "%#{search}%"}
+  scope :search_email, ->search{where "email LIKE ?", "%#{search}%"}
+  scope :not_user, ->(user_id){where "id NOT IN (?)", user_id}
+  scope :order_active, ->{order activated: :desc}
+
   scope :search, (lambda do |search|
     if search
       where("full_name LIKE ? OR email LIKE ?", "%#{search}%", "%#{search}%")
