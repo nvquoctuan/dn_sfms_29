@@ -8,6 +8,6 @@
   <td><%= status[Booking.statuses[booking.status]] %></td>
   <td><%= booking.total_price %></td>
   <td>
-    <%= link_to t(".rating"), "#" %>
+    <%= link_to t(".rating"), get_path(booking) %>
   </td>
 </tr>

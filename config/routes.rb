@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "static_pages#home"
-  resources :bookings
+  resources :bookings do
+    resources :ratings, except: :show, controller: "bookings/ratings"
+  end
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"
