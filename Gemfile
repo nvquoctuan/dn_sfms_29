@@ -7,6 +7,7 @@ gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-sass", "~> 3.4.1"
 gem "config"
+gem "faker"
 gem "figaro"
 gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"
@@ -19,12 +20,13 @@ gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
+gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "mysql2"
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
-  gem "mysql2"
 end
 
 group :development do

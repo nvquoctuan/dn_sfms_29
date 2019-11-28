@@ -112,11 +112,11 @@ ActiveRecord::Schema.define(version: 2019_11_22_160145) do
     t.string "currency"
     t.text "picture"
     t.string "size"
-    t.bigint "subpitch_id", null: false
+    t.bigint "subpitch_type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["pitch_id"], name: "index_subpitches_on_pitch_id"
-    t.index ["subpitch_id"], name: "index_subpitches_on_subpitch_id"
+    t.index ["subpitch_type_id"], name: "index_subpitches_on_subpitch_type_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -152,5 +152,5 @@ ActiveRecord::Schema.define(version: 2019_11_22_160145) do
   add_foreign_key "ratings", "bookings"
   add_foreign_key "ratings", "users"
   add_foreign_key "subpitches", "pitches"
-  add_foreign_key "subpitches", "subpitches"
+  add_foreign_key "subpitches", "subpitch_types"
 end

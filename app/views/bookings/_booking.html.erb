@@ -1,0 +1,13 @@
+<tr>
+  <td><%= booking.user_full_name %></td>
+  <td><%= booking.subpitch_name %></td>
+  <td><%= booking.start_time.strftime("%m-%d-%Y %H:%m") %></td>
+  <td><%= booking.end_time.strftime("%m-%d-%Y %H:%m") %></td>
+  <td><%= booking.message %></td>
+  <% status = [t(".verifiled_paid"), t(".verifiled_unpay"), t(".unverifile")] %>
+  <td><%= status[Booking.statuses[booking.status]] %></td>
+  <td><%= booking.total_price %></td>
+  <td>
+    <%= link_to t(".rating"), "#" %>
+  </td>
+</tr>
