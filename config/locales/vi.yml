@@ -1,8 +1,36 @@
 vi:
+  helpers:
+    label:
+      user:
+        name: Tên
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        phone: Số điện thoại
+        male: Nam
+        female: Nữ
+      session:
+        email: Email
+        password: Mật khẩu
+      rating:
+        content: "Nội dung"
+        star: "Sao"
+    submit:
+      user:
+        create: Tạo tài khoản
+        update: Lưu thay đổi
+      session:
+        submit: Đăng nhập
+      password_reset:
+        submit: Tiếp tục
+      rating:
+        create: "Tạo đánh giá"
+        update: "Cập nhật đánh giá"
   layouts:
     application:
       title: "Đặt lịch sân bóng đá nhanh chóng"
     header:
+      ratings: "Đánh giá"
       login: "Đăng nhập"
       register: "Đăng ký"
       lang_vi: "Việt Nam"
@@ -100,27 +128,7 @@ vi:
     new:
       forgot_password: Quên mật khẩu
     email_address_not_found: Địa chỉ email chưa được đăng kí!
-  helpers:
-    label:
-      user:
-        name: Tên
-        email: Email
-        password: Mật khẩu
-        password_confirmation: Xác nhận mật khẩu
-        phone: Số điện thoại
-        male: Nam
-        female: Nữ
-      session:
-        email: Email
-        password: Mật khẩu
-    submit:
-      user:
-        create: Tạo tài khoản
-        update: Lưu thay đổi
-      session:
-        submit: Đăng nhập
-      password_reset:
-        submit: Tiếp tục
+
   user_mailer:
     account_activation_subject: Kích hoạt tài khoản
     account_activation:
@@ -192,6 +200,22 @@ vi:
       rating:
         del: "Xóa"
         edit: "Sửa"
+  ratings:
+    index:
+      title: "Đánh giá của tôi"
+      subptich_name: "Tên sân nhỏ"
+      booking_start_time: "Thời gian đặt"
+      booking_end_time: "Thời gian kết thúc"
+      content: "Nội dung"
+      star: "Sao"
+      status: "Trạng thái"
+      option: "Tùy chọn"
+    rating:
+      unverifile: "Chưa xác thực"
+      verifiled_unpay: "Đã xác thực và chưa thanh toán"
+      verifiled_paid: "Đã thanh toán và đã trả"
+      del: "Xóa"
+      edit: "Sửa"
   msg:
     create_success: "Tạo thành công"
     create_danger: "Tạo thất bại"

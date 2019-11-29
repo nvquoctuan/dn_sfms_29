@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :bookings do
     resources :ratings, except: :show, controller: "bookings/ratings"
   end
+  resources :ratings, only: :index
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"
