@@ -1,7 +1,11 @@
 module UsersHelper
   private
 
-   def check_admin?
+  def role
+    [{id: 0, name: ".admin"}, {id: 1, name: ".owner"}, {id: 2, name: ".user"}]
+  end
+
+  def check_admin?
     current_user.admin?
   end
 

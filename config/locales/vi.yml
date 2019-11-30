@@ -467,6 +467,8 @@ vi:
     update_success: "Cập nhật thành công"
     update_danger: "Cập nhật thất bại"
     danger_permision: "Người dùng không có quyền"
+    confirm: "Bạn chắc chứ?"
+    login: "Hãy đăng nhập"
     not_subpitch: "Không có sân nhỏ"
     not_pitch: "Không có sân lớn"
     play_time_invalid: "Giờ mở cửa không hợp lệ"

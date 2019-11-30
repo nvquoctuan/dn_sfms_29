@@ -481,6 +481,8 @@ en:
     danger_permission: "User not permission"
     play_time_invalid: "Play time invalid"
     pitch_not_exists: "Pitch not exists"
+    confirm: "You sure?"
+    login: "Please login"
   bookings:
     index:
       title: "Booking List pitch "
