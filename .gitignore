@@ -13,7 +13,6 @@
 !/log/.keep
 !/tmp/.keep
 /storage/*
-.rubocop*
 !/storage/.keep
 .byebug_history
 /config/master.key
@@ -68,4 +67,10 @@ yarn-debug.log*
 /node_modules
 /public
 /Gemfile.lock
+/config/application.yml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# Ignore application configuration
 /config/application.yml
