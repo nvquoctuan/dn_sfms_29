@@ -1,27 +1,7 @@
 en:
-  helpers:
-    label:
-      user:
-        full_name: "Full name"
-        email: "Email address"
-        password: "Password"
-        password_confirmation: "Confirmation password"
-      session:
-        email: "Email"
-        password: "Password"
-        danger: "Account creation failed!"
-      pitch:
-        address: "ADDRESS"
-        start_time: "Start time"
-        end_time: "End time"
-        city: "City"
-        district: "District"
-    submit:
-      user:
-        create: "Create account"
-        update: "Update"
-      pitch:
-        search_pitch: "Search pitch"
+  users:
+    show:
+      title: "Quick schedule of football field"
   layouts:
     admin:
       sidebar:
@@ -40,13 +20,10 @@ en:
         profile: "Profile"
         lock: "Lock Account"
         logout: "Logout"
-        hello: "Hello: "
-        english: "English"
       footer:
         link: "CoreUI"
         content1_html: "&copy; 2019 creativeLabs."
         content2_html: "Powered by&nbsp;"
-  layouts:
     application:
       title: "Quick schedule of football field"
     header:
@@ -58,6 +35,9 @@ en:
       about: "About"
       blog: "Blog"
       contact: "Contact"
+      connect_facebook: Connect With Facebook
+      log_out: Logout
+      setting: Setting
       language: "Language"
     right_sidebar:
       pitch: "Pitch"
@@ -73,13 +53,13 @@ en:
       content2: "Millions of people come to the stadium to watch their favorite team matches, and millions more to watch via television if they can't get to the stadium"
   static_pages:
     home:
-      soccer_update: "Soccer field is new updated"
       address: "Address: "
       pitch: "Pitch"
       soccer_update: "Soccer field is new updated"
       rss_feed: "rss feed"
       name: "Soccer"
       description: "The yard has a large, 3 mini yards, each yard for 5-7 people."
+      home: Home
     about:
       about: "About"
       text_html: "Football or Soccer (English-English: Football, American-English: Soccer) is a team sport played between two teams."
@@ -90,23 +70,137 @@ en:
       contact: "Contact"
       text1: "Football or Soccer (English-English: Football, American-English: Soccer) is a team sport played between two teams."
   users:
+    id_unexist: ID not exist!
+    please_log_in: You has not been logged in
+    not_allow: you are not allowed
     new:
-      update: "Update"
-      text1: "Sign in"
+      sign_up: Sign up
+      title: Quick schedule of football field
     create:
-     welcome_user: "Register account successfly!"
-  sessions:
-    new:
-      sign_up: "Sign up"
-      log_in: "Log in"
+      please_check_mail: Please check your email to activate your account.
+    update:
+      profile_updated: Profile has been updated
+    edit:
+      edit_user: Edit user profile
+      update_your_profile: Update user profile
+    show:
+      name: Name
+      gender: Gender
+      email: Email
+      phone: Phone
+      your_profile: Your profile
+      male: Male
+      female: Female
+      title: Quick schedule of football field
+  account_activations:
+    edit:
+      account_activated: Account activated!
+      invalid_activation_link: Invalid activation link!
   user:
     success: "Success!"
     danger: "Failed!"
   pitches:
     search_soccer:
       address: "Address: "
+    view_soccer:
+      address: "Address: "
     index:
       address: "Address: "
       notification: "There are no valid football fields!"
   generate:
     page_title: "soccer fields"
+  shared:
+    error_messages:
+      error:
+        one: "Form has %{count} error"
+        other: "Form has %{count} errors"
+  sessions:
+    new:
+      sign_up: Sign up
+      log_in: Log in
+      new_user: "New user? "
+      remember_text: Rememmber me
+      forgot_password: Forgot password?
+    create:
+      invalid_credentials: Invalid credentials!
+      check_your_email: Your account has not been activated. Please check your
+        email to activate it!
+  password_resets:
+    create:
+      notice_sent_reset_password_instructions: An email has been sent to your
+        email address, containing instructions for resetting your password
+      email_address_not_found: Email address is not registered!
+      cant_reset_password: This account has not been activated so it cannot be
+        reset!
+    update:
+      cant_be_empty: Cannot be empty!
+      password_has_been_reset: Password has been reset.
+    edit:
+      password_reset_has_expired: Password reset time has expired.
+      reset_password: Reset password
+      email_address_not_found: Email not found
+    new:
+      forgot_password: Forgot password
+    email_address_not_found: Email address is not registered!
+  helpers:
+    label:
+      user:
+        name: Name
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        phone: Phone
+        male: Male
+        female: Female
+      session:
+        email: Email
+        password: Password
+      pitch:
+        address: ADDRESS
+        start_time: Start time
+        end_time: End time
+        city: City
+        district: District
+    submit:
+      pitch:
+        search_pitch: Search pitch
+      user:
+        create: Create
+        update: Update
+      session:
+        submit: Login
+      password_reset:
+        submit: Continue
+  user_mailer:
+    account_activation_subject: Activate account
+    account_activation:
+      h1: Book Soccer
+      greeting: Hi
+      content_mail: "Welcome to Soccer Book! Click on the link below to
+        activate your account: "
+      activate: Activate
+    password_reset_subject: Set a password
+    password_reset:
+      h1: Set a password
+      p1_password_reset: "To reset your password click on the link below: "
+      reset_password: Reset a password
+      p2_password_reset: This link expires in 2 hours.
+      p3_password_reset: If you did not request a password reset,
+        please disregard this email, your password will not change.
+  activerecord:
+    attributes:
+      user:
+        full_name: Name
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+    errors:
+      models:
+        user:
+          attributes:
+            phone:
+              invalid: include only numbers and must be 10 characters or more
+  oversize_upload_picture: should be less than 5MB
+  oversize_upload: Maximum file upload capacity of 5MB. Please select a
+    smaller file
+  not_allow: You are not allowed

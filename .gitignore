@@ -12,13 +12,14 @@
 !/log/.keep
 !/tmp/.keep
 /storage/*
-.rubocop*
 !/storage/.keep
 .byebug_history
+/config/master.key
+config/settings/local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
 # Used by dotenv library to load environment variables.
 # .env
-/db/*.sqlite3
-/db/*.sqlite3-journal
 .dat*
 .repl_history
 build/
@@ -62,8 +63,8 @@ yarn-debug.log*
 /Gemfile.lock
 /config/application.yml
 config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
-
-# Ignore application configuration
-/config/application.yml
+soccer_db
+soccer_dev
+.rubocop.yml
+.rubocop_enabled.yml
+.rubocop_disabled.yml
