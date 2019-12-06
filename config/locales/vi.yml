@@ -91,7 +91,7 @@ vi:
       sign_up: Đăng kí
       title: "Đặt lịch sân bóng đá nhanh chóng"
     create:
-      please_check_mail: Vui lòng kiểm tra email của bạn để kích hoạt tài 
+      please_check_mail: Vui lòng kiểm tra email của bạn để kích hoạt tài
         khoản của bạn.
     update:
       profile_updated: Hồ sơ đã được cập nhật
@@ -206,3 +206,24 @@ vi:
   oversize_upload_picture: nên nhỏ hơn 5MB
   oversize_upload: Dung lượng tệp tải lên tối đa 5MB. Vui lòng chọn tệp nhỏ hơn
   not_allow: Bạn không được phép
+  subpitches:
+    danger_load: "Tải thất bại"
+    danger_load_subpitch: "Tải thất bại sân nhỏ"
+    show:
+      name: "Tên: %{add}"
+      price_per_hour: "Giá mỗi giờ: %{add}"
+      currency: "Tiền tệ: %{add}"
+      size: "Kích cỡ: %{add}"
+      subpitch_type: "Loại sân: %{add}"
+      desc: "Mô tả: %{add}"
+      content: "Bình luận ở đây"
+      comment: "Bình luận"
+    subpitch:
+      name: "Tên: %{add}"
+      price_per_hour: "Giá mỗi giờ: %{add}"
+      currency: "Tiền tệ: %{add}"
+      size: "Kích cỡ: %{add}"
+      subpitch_type: "Loại sân: %{add}"
+      desc: "Mô tả: %{add}"
+  msg:
+    not_subpitch: "Không có sân nhỏ"

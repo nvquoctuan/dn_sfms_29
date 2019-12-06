@@ -1,0 +1,54 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'linearicons';
+@import 'magnific-popup';
+@import 'main';
+@import 'nice-select';
+@import 'owl.carousel';
+@import 'animate.min';
+@import 'variables';
+@import 'font-awesome.min';
+
+/* general */
+.cl-white{
+  color: $white;
+}
+.text-center{
+  text-align: center;
+}
+.left{
+  float: left;
+}
+.mar-b15{
+  margin-bottom: 15px;
+}
+.m-w350{
+  max-width: 350px;
+}
+.h100{
+  heigth: 100px;
+}
+
+/* subpitch_user */
+
+#subpitch_user{
+  display: table;
+  width: 100%;
+  padding-top: 150px;
+}
+
+#show_subpitch{
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+
+  div{
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+  }
+
+  .card{
+    margin-bottom: 15px;
+  }
+}
