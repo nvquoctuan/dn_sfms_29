@@ -27,6 +27,14 @@ class User < ApplicationRecord
   validates :password, presence: true, length:
     {minimum: Settings.password_min}, on: :reset_password
 
+  enum role: {admin: 0, owner: 1, user: 2}
+  scope :order_active, ->{order activated: :desc}
+  scope :search, (lambda do |search|
+    if search
+      where("full_name LIKE ? OR email LIKE ?", "%#{search}%", "%#{search}%")
+    end
+  end)
+
   class << self
     # Returns the hash digest of the given string.
     def digest string
