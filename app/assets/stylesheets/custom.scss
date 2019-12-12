@@ -24,7 +24,7 @@
   max-height: 100px;
 }
 .wid30{
-  width: 30%;
+  width: 30% !important;
 }
 .h14{
   height: 14px;
@@ -53,6 +53,9 @@
 }
 .left{
   float: left;
+}
+.right{
+  float: right;
 }
 .mar-b15{
   margin-bottom: 15px;

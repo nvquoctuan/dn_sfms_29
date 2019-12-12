@@ -25,5 +25,9 @@ default_avatar: "admin/coreui-base.svg"
 size:
   s12: 12
   s_12: 12
+  s_12: 12
   s97: 97
   s46: 46
+  s50: 50
+  s255: 255
+  s10: 10
