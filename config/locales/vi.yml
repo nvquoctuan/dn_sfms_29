@@ -2,11 +2,16 @@ vi:
   helpers:
     label:
       pitch:
+        name: "Tên"
+        description: "Mô tả"
+        country: "quốc gia"
+        city: "Thành phố"
+        district: "Quận huyện"
         address: "Địa chỉ"
+        picture: "Hình ahr"
         start_time: "Giờ bắt đầu"
         end_time: "Giờ kết thúc"
-        city: "Tỉnh/Thành phố"
-        district: "Quận/Huyện"
+        limit: "Giới hạn giờ"
       user:
         name: Tên
         email: Email
@@ -31,6 +36,8 @@ vi:
         submit: Tiếp tục
       pitch:
         search_pitch: "Tìm kiếm sân"
+        create: "Tạo sân bóng"
+        update: "Cập nhật sân bóng"
       subpitch_type:
         create: "Tạo loại sân bóng"
   activerecord:
@@ -49,6 +56,10 @@ vi:
               blank: không thể để trắng
             phone:
               invalid: chỉ bao gồm số và phải từ 10 kí tự trở lên
+        pitch:
+          attributes:
+            end_time:
+              after: "phải lớn hơn giờ bắt đầu."
   layouts:
     admin:
       sidebar:
@@ -137,6 +148,50 @@ vi:
     index:
       notification: "Không có sân bóng nào hợp lệ!"
   admin:
+    pitches:
+      new:
+        title: Thêm sân mới
+      form:
+        vi: "VietNam"
+        en: "EngLish"
+      danger_load: "Tải thất bại"
+      create:
+        success: "Tạo thành công"
+        danger: "Tạo thất bại"
+      update:
+        success: "Cập nhật thành công"
+        danger: "Cập nhật thất bại"
+      destroy:
+        success: "Xóa thành công"
+        danger: "Xóa thất bại."
+      show:
+        title: "Sân bóng %{add}"
+        owner: "Chủ sở hữu: %{add}"
+        name: "Tên: %{add}"
+        description: "Mô tả: %{add}"
+        country: "Quốc gia: %{add}"
+        city: "Thành phố: %{add}"
+        start_time: "Giờ bắt đầu: %{add}"
+        end_time: "Giờ kết thúc: %{add}"
+      index:
+        search: "Tìm kiếm"
+        new: "Tạo mới sân bóng"
+        title: "Danh sách sân bóng"
+        id: "#"
+        user: "Người dùng"
+        name: "Tên sân bóng"
+        description: "Mô tả"
+        country: "Quốc gia"
+        city: "Thành phố"
+        district: "Quận huyện"
+        picture: "Hình ảnh"
+        start_time: "Giờ bắt đầu"
+        end_time: "Giờ kết thúc"
+        option: "Tùy chọn"
+      pitch:
+        edit: "Chỉnh sửa"
+        delete: "Xóa"
+        confirm: "Bạn chắc chứ?"
     pages:
       home:
         title: "Trang chủ admin"
@@ -168,6 +223,8 @@ vi:
     please_log_in: Vui lòng đăng nhập
     not_allow: Bạn không được phép
     new:
+      update: "Cập nhật"
+      text1: "Đăng ký"
       sign_up: Đăng kí
       title: "Đặt lịch sân bóng đá nhanh chóng"
     create:
@@ -283,9 +340,14 @@ vi:
     update_danger: "Update danger"
     danger_permision: "Người dùng không có quyền"
     not_subpitch: "Không có sân nhỏ"
+    not_pitch: "Không có sân lớn"
+    play_time_invalid: "Giờ mở cửa không hợp lệ"
   generate:
     page_title: "Sân bóng đá"
     title: "Sân bóng đá"
     female: "Nữ"
     male: "Nam"
     back: "Back"
+  will_paginate:
+    previous_labels: "Trang trước"
+    next_label: "Trang sau"

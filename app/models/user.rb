@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  before_save{email.downcase!}
   before_create :create_activation_digest
   attr_accessor :remember_token, :activation_token, :reset_token
   DATA_TYPE_USERS = %i(full_name email password password_confirmation).freeze
@@ -10,6 +9,7 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
   VALID_PHONE_REGEX = /\A[\d]{10,}\z/i.freeze
   has_one_attached :avatar
+  has_many :pitches, dependent: :destroy
   validates :full_name, presence: true,
     length: {maximum: Settings.name_in_users_max}
   validates :email, presence: true,

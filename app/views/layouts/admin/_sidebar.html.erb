@@ -11,8 +11,9 @@
     </li>
     <li class="c-sidebar-nav-title"><%= t ".manage" %></li>
     <li class="c-sidebar-nav-item">
-      <%= link_to "#", class: "c-sidebar-nav-link" do %>
-        <svg class="c-sidebar-nav-icon"></svg><%= t ".pitch" %>
+      <%= link_to admin_pitches_path, class: "c-sidebar-nav-link" do %>
+        <svg class="c-sidebar-nav-icon">
+        </svg> <%= t ".pitch" %>
       <% end %>
 
     <li class="c-sidebar-nav-item">

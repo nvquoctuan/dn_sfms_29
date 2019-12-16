@@ -13,6 +13,7 @@ module SoccerField
                                 '*.{rb,yml}')]
     config.autoload_paths << Rails.root.join('assets')
     config.i18n.available_locales = [:en, :vi]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :vi
+    config.autoload_paths += %W["#{config.root}/app/validators/"]
   end
 end

@@ -8,7 +8,30 @@ User.create!({full_name: "Example User", email: "user@soccer.vn", password: "adm
   user_id = 1
   description = Faker::Name.name
   address = Faker::Address.street_address
-  Pitch.create!(name: name, user_id: user_id, description: description, address: address)
+  Pitch.create!({user_id: 1,
+           name: name,
+           description: description,
+           country: "VN",
+           city: "Da nang",
+           phone: "5555555555",
+           district: "Hai chau",
+           address: address,
+           limit: 2})
+end
+
+5.times do |n|
+  name  = Faker::Name.name
+  description = Faker::Name.name
+  address = Faker::Address.street_address
+  Pitch.create!({user_id: 2,
+           name: name,
+           description: description,
+           country: "vn",
+           city: "Da nang",
+           phone: "5555555555",
+           district: "Hai chau",
+           address: address,
+           limit: 2})
 end
 SubpitchType.create!({name: "loai vip", description: "mo ta loai vip"})
 
