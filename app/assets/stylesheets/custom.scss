@@ -15,6 +15,48 @@
   box-sizing: border-box;
 }
 
+/* general */
+
+.wid30{
+  width: 30% !important;
+}
+.m-w200{
+  max-width: 200px;
+}
+.m-h200{
+  max-height: 200px;
+}
+.m-h500{
+  max-height: 500px;
+}
+.m-w500{
+  max-width: 500px;
+}
+.auto{
+  margin: 0 auto;
+}
+.w500{
+  width: 500px;
+}
+.wid50{
+  width: 50%;
+}
+.wid50{
+  width: 50%;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.pad0{
+  padding: 0px;
+}
+.mar-l20{
+  margin-left: 20px;
+}
+
 /* PAGINATION */
 .pagination {
   margin: 0 auto;

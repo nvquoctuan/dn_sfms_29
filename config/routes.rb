@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     root "pages#home"
     resources :users, controller: "/users"
     resources :subpitch_types
-    resources :pitches
+    resources :pitches do
+      resources :subpitches, except: :index, controller: "pitches/subpitches"
+    end
   end
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
