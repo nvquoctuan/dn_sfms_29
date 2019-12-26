@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :subpitch_types
     resources :pitches do
       resources :subpitches, except: :index, controller: "pitches/subpitches"
+      get "/revenue", to: "pitches/revenues#index", on: :collection
+      get "/revenue", to: "pitches/revenues#show", on: :member
     end
   end
   post "/login", to: "sessions#create"

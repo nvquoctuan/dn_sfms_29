@@ -1,5 +1,5 @@
 class Admin::Pitches::SubpitchesController < AdminController
-  before_action :load_subpitch, except: %i(index new create)
+  before_action :load_subpitch, except: %i(new create)
   before_action :load_info, only: %i(new edit)
   before_action :load_pitch
   before_action ->{check_pitch_owner(@pitch)}
@@ -61,7 +61,7 @@ class Admin::Pitches::SubpitchesController < AdminController
   end
 
   def load_info
-    @pitches = (check_admin?) ? Pitch.all : Pitch.pitch_owner(current_user.id)
+    @pitches = check_admin? ? Pitch.all : current_user.pitches
     @subpitch_types = SubpitchType.all
     return if @pitches
 

@@ -43,3 +43,11 @@ SubpitchType.create!({name:  "SubpitchType 1",
            size: size,
            subpitch_type_id: 1})
 end
+
+30.times do |n|
+  Booking.create!({user_id: 1, subpitch_id: 2, start_time: Time.now, end_time: Time.now, message: "123", status: 2, total_price: 50000})
+end
+
+30.times do |n|
+  Booking.create!({user_id: 2, subpitch_id: 2, start_time: Time.now, end_time: Time.now, message: "123", status: 0, total_price: 40000})
+end
