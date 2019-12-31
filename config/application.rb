@@ -15,5 +15,6 @@ module SoccerField
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :vi
     config.autoload_paths += %W["#{config.root}/app/validators/"]
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
