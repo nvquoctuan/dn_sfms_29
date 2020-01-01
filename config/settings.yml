@@ -1,3 +1,4 @@
+comment_length_max: 150
 name_in_users_max: 50
 email_in_users_max: 50
 password_min: 6
