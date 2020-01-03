@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
     resources :ratings, only: %i(index destroy), controller: "subpitches/ratings"
   end
+  resources :bookings, only: :index
   post "/login", to: "sessions#create"
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"

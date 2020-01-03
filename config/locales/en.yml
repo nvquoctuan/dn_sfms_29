@@ -481,3 +481,20 @@ en:
     danger_permission: "User not permission"
     play_time_invalid: "Play time invalid"
     pitch_not_exists: "Pitch not exists"
+  bookings:
+    index:
+      title: "Booking List pitch "
+      user_name: "User name"
+      subpitch_name: "Subpitch"
+      start_time: "Start time"
+      end_time: "End time"
+      message: "Message"
+      status: "Status"
+      total_price: "Total price"
+      option: "Option"
+      search: "Search"
+    booking:
+      unverfile: "Unverfile"
+      verifiled_unpay: "Verifiled and not pay"
+      verifiled_paid: "Verifiled and paid"
+      rating: "Rating"

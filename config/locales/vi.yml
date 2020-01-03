@@ -492,4 +492,19 @@ vi:
   will_paginate:
     previous_labels: "Trang trước"
     next_label: "Trang sau"
-
+  bookings:
+    index:
+      title: "Danh sách đặt sân"
+      user_name: "Họ tên"
+      subpitch_name: "Sân nhỏ"
+      start_time: "Thời gian bắt đầu"
+      end_time: "Thời gian kết thúc"
+      message: "Tin nhắn"
+      status: "Trạng thái"
+      total_price: "Tổng tiền"
+      option: "Lựa chọn"
+    booking:
+      unverfile: "Chưa xác thực"
+      verifiled_unpay: "Đã xác thực và chưa thanh toán"
+      verifiled_paid: "Đã thanh toán và đã xác thực"
+      rating: "Đánh giá"
