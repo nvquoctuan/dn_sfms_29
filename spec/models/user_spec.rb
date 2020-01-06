@@ -48,6 +48,6 @@ RSpec.describe User, type: :model do
     it {is_expected.to validate_presence_of(:email)}
     it {is_expected.to validate_length_of(:email).is_at_most(255)}
 
-    it {is_expected.to validate_presence_of(:phone).on(:update)}
+    it {is_expected.to allow_value(nil).for(:phone).on(:update)}
   end
 end

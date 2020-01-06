@@ -481,6 +481,8 @@ en:
     danger_permission: "User not permission"
     play_time_invalid: "Play time invalid"
     pitch_not_exists: "Pitch not exists"
+    confirm: "You sure?"
+    login: "Please login"
   bookings:
     index:
       title: "Booking List pitch "
@@ -498,3 +500,23 @@ en:
       verifiled_unpay: "Verifiled and not pay"
       verifiled_paid: "Verifiled and paid"
       rating: "Rating"
+  devise:
+    passwords:
+      edit:
+        reset_password: "Reset password"
+        change_pass: "Change my password"
+      new:
+        forgot_password: "Forgot password"
+    sessions:
+      new:
+        log_in: Login
+    registrations:
+      edit:
+        sign_up: Edit profile
+        notify_pass: (leave blank if you don't want to change it)
+        notify_current_pass: (we need your current password to confirm your changes)
+        cancel_account: "Cancel my account"
+    confirmations:
+      new:
+        sign_up: Signup
+        resend_confirm: Resend confirmation instructions

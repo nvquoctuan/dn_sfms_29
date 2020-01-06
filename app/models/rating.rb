@@ -13,11 +13,6 @@ class Rating < ApplicationRecord
   delegate :status, :total_price, to: :booking, prefix: true
   delegate :full_name, to: :user, prefix: true
 
-  scope :search, (lambda do |search|
-    joins(booking: :subpitch).where("(subpitches.name LIKE ?) OR
-      (ratings.content LIKE ?)", "%#{search}%", "%#{search}%")
-  end)
-
   scope :by_subpitch, (lambda do |subpitch_id|
     joins(:booking).where("bookings.subpitch_id = ?", subpitch_id)
   end)

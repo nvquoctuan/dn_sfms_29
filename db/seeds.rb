@@ -141,6 +141,3 @@ end
    Rating.create!({user_id: 3, booking_id: n+1, star: 5, content: "Very good nhe moi nguoi"})
 end
 
-50.times do |n|
-   Rating.create!({user_id: 3, booking_id: n+1, star: 5, content: "Very good nhe moi nguoi"})
-end

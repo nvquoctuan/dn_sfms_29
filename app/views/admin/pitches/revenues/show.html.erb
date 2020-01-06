@@ -2,15 +2,21 @@
 <h1><%= t ".title" %></h1>
 <div>
   <%= form_with url: "#", local: true, class: "input-group", method: "get" do |f| %>
-    <span class="input-group-prepend left">
-      <%= f.button "", class: "btn btn-primary" do %>
-        <svg class="c-icon" class="h14 w20">
-          <use xlink:href="/assets/admin/coreui/free-symbol-defs.svg#cui-magnifying-glass"></use>
-        </svg> <%= t ".search" %>
-      <% end %>
+    <div class='input-group date w150 left' id='datetimepicker1'>
+      <%= f.text_field :bookings_start_time_gteq, class: "form-control" %>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+    <div class='input-group date w150 left' id='datetimepicker2'>
+      <%= f.text_field :bookings_end_time_lteq, class: "form-control" %>
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+    <span class="input-group-prepend left ">
+      <%= f.button "", class: "btn btn-primary glyphicon glyphicon-search" %>
     </span>
-    <%= f.text_field :search, class: "form-control", id: "input1-group2", style: "width: 30%; float: left", value: params[:search] %>
-    <%= select_tag "order", options_for_select(order.collect{|u| [t(u[:name]), u[:id]]}, selected: params[:order]), onchange: "this.form.submit()", class: "btn btn-info dropdown-toggle" %>
   <% end %>
 </div>
 <hr class="mt-0">

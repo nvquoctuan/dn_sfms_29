@@ -1,5 +1,5 @@
 class Subpitches::LikesController < SubpitchesController
-  before_action :logged_in_user
+  before_action :authenticate_user!
   before_action ->{load_subpitch(params[:subpitch_id])}
   before_action :correct_user, only: :destroy
   before_action :load_like

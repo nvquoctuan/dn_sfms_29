@@ -6,3 +6,8 @@ $(document).ready(function() {
     e.preventDefault();
   });
 });
+$(function () {
+  $('#datetimepicker1, #datetimepicker2').datetimepicker({
+    format: 'YYYY-MM-DD'
+  });
+});

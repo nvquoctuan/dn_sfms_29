@@ -467,6 +467,8 @@ vi:
     update_success: "Cập nhật thành công"
     update_danger: "Cập nhật thất bại"
     danger_permision: "Người dùng không có quyền"
+    confirm: "Bạn chắc chứ?"
+    login: "Hãy đăng nhập"
     not_subpitch: "Không có sân nhỏ"
     not_pitch: "Không có sân lớn"
     play_time_invalid: "Giờ mở cửa không hợp lệ"
@@ -508,3 +510,23 @@ vi:
       verifiled_unpay: "Đã xác thực và chưa thanh toán"
       verifiled_paid: "Đã thanh toán và đã xác thực"
       rating: "Đánh giá"
+  devise:
+    passwords:
+      edit:
+        reset_password: "Thiết lập lại mật khẩu"
+        change_pass: "Đổi mật khẩu"
+      new:
+        forgot_password: "Quên mật khẩu"
+    sessions:
+      new:
+        log_in: Đăng nhập
+    registrations:
+      edit:
+        sign_up: Chỉnh sửa thông tin
+        notify_pass: (bỏ trống nếu bạn không muốn thay đổi)
+        notify_current_pass: (chúng tôi cần mật khẩu hiện tại để xác thực thay đổi của bạn)
+        cancel_account: "HỦy bỏ tài khoản"
+    confirmations:
+      new:
+        sign_up: Đăng ký
+        resend_confirm: Gửi lại email xác thực
