@@ -1,7 +1,7 @@
-User.create!({full_name: "Example User", email: "admin@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964991298", role: 0, confirmed_at: Time.zone.now})
-User.create!({full_name: "Example User", email: "owner@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964991291", role: 1, confirmed_at: Time.zone.now})
+User.create!({full_name: "Example User", email: "admin@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964991298", role: 0, activated: true,activated_at: Time.zone.now})
+User.create!({full_name: "Example User", email: "owner@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964991291", role: 1, activated: true,activated_at: Time.zone.now})
 
-User.create!({full_name: "Example User", email: "user@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964992291", role: 2, confirmed_at: Time.zone.now})
+User.create!({full_name: "Example User", email: "user@soccer.vn", password: "admin123", password_confirmation: "admin123", phone: "0964992291", role: 2, activated: true,activated_at: Time.zone.now})
 
 99.times do |n|
   name  = Faker::Name.name
@@ -141,6 +141,3 @@ end
    Rating.create!({user_id: 3, booking_id: n+1, star: 5, content: "Very good nhe moi nguoi"})
 end
 
-50.times do |n|
-   Rating.create!({user_id: 3, booking_id: n+1, star: 5, content: "Very good nhe moi nguoi"})
-end

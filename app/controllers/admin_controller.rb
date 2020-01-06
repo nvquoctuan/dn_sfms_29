@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_action :authenticate_user!, :check_user
+  before_action :check_logged_in, :check_user
   layout "admin/application"
 
   private
@@ -11,8 +11,5 @@ class AdminController < ApplicationController
   def check_pitch_owner pitch
     return unless check_owner?
     return if get_user_by(pitch) == current_user.id
-
-    flash[:danger] = t "msg.danger_permission"
-    redirect_to admin_pitches_path
   end
 end
